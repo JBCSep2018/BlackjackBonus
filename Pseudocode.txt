@@ -1,0 +1,107 @@
+Set num1 to zero
+Set num2 to zero
+Set sum to zero
+
+On program run:
+	Print "Hello, let's play some BlackJack"
+	
+	Please enter num1
+	Get and set value of num1
+	Please enter num2
+	Get and set value of num2
+	
+	sum = num1 + num2
+	
+	if(sum == 21)
+		Print "*sum"
+	else if (sum == 0)
+		break;
+	else
+		Print "sum"
+		
+	Print "Goodbye"
+	
+====================BONUS====================
+
+Variables: card1, card2
+Set num1 to zero
+Set num2 to zero
+Set sum to zero
+
+On program run:
+	Print "Hello, let's play some BlackJack"
+	
+	Please enter card1
+	Get and set value of card1
+	
+	Please enter card2
+	Get and set value of card2
+	
+	if( (card1 = J) or (card1 = Q) or (card1 = K) )
+		num1 = 10
+	else if(card1 = A)
+		num1 = 11
+	else	
+		num1 = card1 value
+		
+	if( (card2 = J) or (card2 = Q) or (card2 = K) )
+		num2 = 10
+	else if(card2 = A)
+		num2 = 11
+	else	
+		num2 = card2 value
+		
+	sum = num1 + num2
+	
+	if(sum == 21)
+		Print "*sum"
+	else if (sum == 0)
+		break;
+	else
+		Print "sum"
+		
+	Print "Goodbye"
+	
+====================BONUS BONUS====================
+
+Variables: card1, card2
+Set num1 to zero
+Set num2 to zero
+Set sum to zero
+
+On program run:
+	Print "Hello, let's play some BlackJack"
+	
+	Please enter card1
+	Get and set value of card1
+	if(card1 = A)
+		Prompt user to enter value as 1 or 11
+		Set num1 to value from user
+	
+	Please enter card2
+	Get and set value of card2
+	if(card2 = A)
+		Prompt user to enter value as 1 or 11
+		Set num2 to value from user
+	
+	
+	if( (card1 = J) or (card1 = Q) or (card1 = K) )
+		num1 = 10
+	else	
+		num1 = card1 value
+		
+	if( (card2 = J) or (card2 = Q) or (card2 = K) )
+		num2 = 10
+	else	
+		num2 = card1 value
+		
+	sum = num1 + num2
+	
+	if(sum == 21)
+		Print "*sum"
+	else if (sum == 0)
+		break;
+	else
+		Print "sum"
+		
+	Print "Goodbye"
