@@ -2,7 +2,8 @@ import java.util.Scanner;
 
 public class BlackJack {
   public static void main(String args[]) {
-     Original();
+//     Original();
+    Bonus();
   }
 
   protected static void Original(){
@@ -39,6 +40,43 @@ public class BlackJack {
 
   }
 
+  protected static void Bonus(){
+    String card1, card2;
+    int num1 = 0, num2 = 0, sum = 0;
+    Scanner in = new Scanner(System.in);
+
+    System.out.println("Hello, let's play some BlackJack!");
+
+    do {
+      // Prompt user for card value
+      System.out.printf("Enter your first card: ");
+
+      // Read in card value as a String
+      card1 = in.next();
+
+      /*
+       * Call getCardValue2() method to return numeric value of input, assign this
+       * numeric value to the num1 variable
+       *
+       * Then, convert the string input to uppercase and pass it into the
+       * getCardValue2() method
+       */
+      num1 = getCardValue(card1.toUpperCase());
+      num1 = checkValue(num1);
+
+      System.out.printf("Enter your second card: ");
+      card2 = in.next();
+      num2 = getCardValue(card2.toUpperCase());
+      num2 = checkValue(num2);
+
+      sum = num1 + num2;
+
+      printSum(sum);
+    } while(sum != 21 && sum != 0);
+
+    System.out.println("It was a nice game, goodbye.");
+  }
+
   // int sum is the value of the sum passed in from main above
   private static void printSum(int sum) {
     switch(sum) {
@@ -56,5 +94,36 @@ public class BlackJack {
         System.out.println("Sum: " + sum + ", try again.");
     }
   }
+
+  private static int getCardValue(String card) {
+    // Check if card value passed in is J,Q,K, if so, return a numeric value of 10
+    if(card.equals("J") || card.equals("Q") || card.equals("K")){
+      return 10;
+    }
+    // If input was A, return 11
+    else if(card.equals("A")){
+      return 11;
+    }
+    else {
+      // Else, just return the value inputted converted from a string to integer
+      return Integer.parseInt(card);
+    }
+  }
+
+  private static int checkValue(int input){
+    Scanner in  = new Scanner(System.in);
+    String newInput;
+
+    while(input <0 ||  input >11) {
+      System.out.printf("Card value invalid, please enter value from 0 to 11: ");
+      newInput = in.next();
+      input = getCardValue(newInput.toUpperCase());
+    }
+
+    return input;
+  }
+
+
+
 
 }
