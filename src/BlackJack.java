@@ -1,117 +1,59 @@
-import com.sun.org.apache.xpath.internal.operations.Bool;
-
 import java.util.Scanner;
 
 public class BlackJack {
   public static void main(String args[]) {
      Original();
-//     Bonus();
-//     Bonus2();
   }
 
   protected static void Original(){
     // Think about what variables and their types are needed, declare them first
     int num1 = 0, num2 = 0, sum = 0;
-    Scanner in = new Scanner(System.in); // New instance of the Scanner object
 
-    System.out.println("Hello, let's play some BlackJack!"); // Welcome message
-    System.out.printf("Enter your first number: "); // Prompt the user for first number
-    num1 = in.nextInt();  // Read in user input as an integer and store its value in num1 variable
-
-    System.out.printf("Enter your second number: "); // Prompt the user for second number
-    num2 = in.nextInt(); // Read in second number as integer and store its value in num2 variable
-
-    sum = num1 + num2; // Calculate the sum of the two numbers
-
-    printSum(sum); // Call the printSum() method to print out the sum, pass the sum value to the method as a parameter (see below)
-
-    System.out.println("It was a nice game, goodbye.");
-  }
-
-  protected static void Bonus(){
-    String card1, card2;
-    int num1 = 0, num2 = 0, sum = 0;
+    // New instance of the Scanner object
     Scanner in = new Scanner(System.in);
 
-    System.out.println("Hello, let's play some BlackJack!"); // Prompt user for card value
-    System.out.printf("Enter your first card: "); // Prompt the user for input
-    card1 = in.next(); // Read in card value as a String
-    num1 = getCardValue(card1.toUpperCase()); // Call getCardValue2() method to return numeric value of input, assign this 
-                                              // numeric value to the num1 variable
-                                              // Convert the string input to uppercase and pass it into the getCardValue2() method
-    
-    System.out.printf("Enter you second card: ");
-    card2 = in.next();
-    num2 = getCardValue(card2.toUpperCase());
-
-    sum = num1 + num2;
-
-    printSum(sum);
-
-    System.out.println("It was a nice game, goodbye.");
-  }
-
-  protected static void Bonus2(){
-    String card1, card2;
-    int num1 = 0, num2 = 0, sum = 0;
-    Scanner in = new Scanner(System.in);
-
+    // Welcome message
     System.out.println("Hello, let's play some BlackJack!");
-    System.out.printf("Enter your first card: "); 
-    card1 = in.next(); 
-    num1 = getCardValue2(card1.toUpperCase()); 
-                                               
-   
 
-    System.out.printf("Enter you second card: ");
-    card2 = in.next();
-    num2 = getCardValue2(card2.toUpperCase());
+    do {
+      // Prompt the user for first number
+      System.out.printf("Enter your first number: ");
 
-    sum = num1 + num2; 
+      // Read in user input as an integer and store its value in num1 variable
+      num1 = in.nextInt();
 
-    printSum(sum);
+      // Prompt the user for second number
+      System.out.printf("Enter your second number: ");
+
+      // Read in second number as integer and store its value in num2 variable
+      num2 = in.nextInt();
+
+      sum = num1 + num2; // Calculate the sum of the two numbers
+
+      // Call the printSum() method to print out the sum, pass the sum value
+      // to the method as a parameter (see below)
+      printSum(sum);
+    } while(sum != 21 && sum != 0);
 
     System.out.println("It was a nice game, goodbye.");
+
   }
 
-  private static void printSum(int sum) { // int sum is the value of the sum passed in from main above
-    switch(sum) { // switch statement used to compare the sum
-      case 21: // if sum = 21
-        System.out.println("Sum: *" + sum); // Print the sum with an asterisk *
-        break;  // break statement prevents fall through (all conditions after matching case are executed)
-      case 0: // if sum=0, nothing is printed
+  // int sum is the value of the sum passed in from main above
+  private static void printSum(int sum) {
+    switch(sum) {
+      case 21:
+        // If sum = 21, print the sum with an asterisk *
+        System.out.println("Sum: *" + sum);
+        // Break statement prevents fall through (all conditions after matching case are executed)
         break;
+      // If sum=0, print sum only
+      case 0:
+        System.out.println("Sum: " + sum);
+        break;
+      // All other conditions, print the sum and ask the user to try again
       default:
-        System.out.println("Sum: " + sum); // by default, the sum is printed
-    }
-  }
-
-  private static int getCardValue(String card) {
-    if(card.equals("J") || card.equals("Q") || card.equals("K")){ // Check if card value passed in is J,Q,K, if so, return a 
-      return 10;                                                  // numeric value of 10
-    }
-    else if(card.equals("A")){ // if input was A, return 11
-      return 11;
-    }
-    else {
-      return Integer.parseInt(card); // else, just return the value inputted converted from a string to integer
-    }
-  }
-
-  private static int getCardValue2(String card) {
-    Scanner in = new Scanner(System.in);
-    int value = 0;
-
-    if(card.equals("J") || card.equals("Q") || card.equals("K")){
-      return 10;
-    }
-    else if(card.equals("A")){
-      System.out.printf("Enter value of 1 or 11 for A: ");
-      value = in.nextInt();
-      return  value;
-    }
-    else {
-      return Integer.parseInt(card);
+        System.out.println("Sum: " + sum + ", try again.");
     }
   }
 
