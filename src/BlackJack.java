@@ -10,19 +10,20 @@ public class BlackJack {
   }
 
   protected static void Original(){
+    // Think about what variables and their types are needed, declare them first
     int num1 = 0, num2 = 0, sum = 0;
-    Scanner in = new Scanner(System.in);
+    Scanner in = new Scanner(System.in); // New instance of the Scanner object
 
-    System.out.println("Hello, let's play some BlackJack!");
-    System.out.printf("Enter your first number: ");
-    num1 = in.nextInt();
+    System.out.println("Hello, let's play some BlackJack!"); // Welcome message
+    System.out.printf("Enter your first number: "); // Prompt the user for first number
+    num1 = in.nextInt();  // Read in user input as an integer and store its value in num1 variable
 
-    System.out.printf("Enter your second number: ");
-    num2 = in.nextInt();
+    System.out.printf("Enter your second number: "); // Prompt the user for second number
+    num2 = in.nextInt(); // Read in second number as integer and store its value in num2 variable
 
-    sum = num1 + num2;
+    sum = num1 + num2; // Calculate the sum of the two numbers
 
-    printSum(sum);
+    printSum(sum); // Call the printSum() method to print out the sum, pass the sum value to the method as a parameter (see below)
 
     System.out.println("It was a nice game, goodbye.");
   }
@@ -69,15 +70,15 @@ public class BlackJack {
     System.out.println("It was a nice game, goodbye.");
   }
 
-  private static void printSum(int sum) {
-    switch(sum) {
-      case 21:
-        System.out.println("Sum: *" + sum);
-        break;
-      case 0:
+  private static void printSum(int sum) { // int sum is the value of the sum passed in from main above
+    switch(sum) { // switch statement used to compare the sum
+      case 21: // if sum = 21
+        System.out.println("Sum: *" + sum); // Print the sum with an asterisk *
+        break;  // break statement prevents fall through (all conditions after matching case are executed)
+      case 0: // if case is zero, program terminates
         break;
       default:
-        System.out.println("Sum: " + sum);
+        System.out.println("Sum: " + sum); // by default, the sum is printed
     }
   }
 
