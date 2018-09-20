@@ -36,7 +36,8 @@ public class BlackJack {
     System.out.println("Hello, let's play some BlackJack!"); // Prompt user for card value
     System.out.printf("Enter your first card: "); // Prompt the user for input
     card1 = in.next(); // Read in card value as a String
-    num1 = getCardValue(card1.toUpperCase()); // Call getCardValue2() method to return numeric value of input, assign this numeric value to the num1 variable
+    num1 = getCardValue(card1.toUpperCase()); // Call getCardValue2() method to return numeric value of input, assign this 
+                                              // numeric value to the num1 variable
                                               // Convert the string input to uppercase and pass it into the getCardValue2() method
     
     System.out.printf("Enter you second card: ");
@@ -86,14 +87,14 @@ public class BlackJack {
   }
 
   private static int getCardValue(String card) {
-    if(card.equals("J") || card.equals("Q") || card.equals("K")){ // Check if card value passed in is J,Q,K, if so, return a numeric value of 10
-      return 10;
+    if(card.equals("J") || card.equals("Q") || card.equals("K")){ // Check if card value passed in is J,Q,K, if so, return a 
+      return 10;                                                  // numeric value of 10
     }
     else if(card.equals("A")){ // if input was A, return 11
       return 11;
     }
     else {
-      return Integer.parseInt(card); // else, just return the value entered converted from a string to integer
+      return Integer.parseInt(card); // else, just return the value inputted converted from a string to integer
     }
   }
 
