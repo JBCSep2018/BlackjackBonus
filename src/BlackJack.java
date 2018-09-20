@@ -59,7 +59,7 @@ public class BlackJack {
        * numeric value to the num1 variable
        *
        * Then, convert the string input to uppercase and pass it into the
-       * getCardValue2() method
+       * getCardValue() method
        */
       num1 = getCardValue(card1.toUpperCase());
       num1 = checkValue(num1);
@@ -67,6 +67,43 @@ public class BlackJack {
       System.out.printf("Enter your second card: ");
       card2 = in.next();
       num2 = getCardValue(card2.toUpperCase());
+      num2 = checkValue(num2);
+
+      sum = num1 + num2;
+
+      printSum(sum);
+    } while(sum != 21 && sum != 0);
+
+    System.out.println("It was a nice game, goodbye.");
+  }
+
+  protected static void Bonus2(){
+    String card1, card2;
+    int num1 = 0, num2 = 0, sum = 0;
+    Scanner in = new Scanner(System.in);
+
+    System.out.println("Hello, let's play some BlackJack!");
+
+    do {
+      // Prompt user for card value
+      System.out.printf("Enter your first card: ");
+
+      // Read in card value as a String
+      card1 = in.next();
+
+      /*
+       * Call getCardValue2() method to return numeric value of input, assign this
+       * numeric value to the num1 variable
+       *
+       * Then, convert the string input to uppercase and pass it into the
+       * getCardValue2() method
+       */
+      num1 = getCardValue2(card1.toUpperCase(), 0);
+      num1 = checkValue(num1);
+
+      System.out.printf("Enter your second card: ");
+      card2 = in.next();
+      num2 = getCardValue2(card2.toUpperCase(), num1);
       num2 = checkValue(num2);
 
       sum = num1 + num2;
@@ -106,6 +143,28 @@ public class BlackJack {
     }
     else {
       // Else, just return the value inputted converted from a string to integer
+      return Integer.parseInt(card);
+    }
+  }
+
+  private static int getCardValue2(String card, int num1) {
+    Scanner in = new Scanner(System.in);
+    int value = 0;
+
+    if(card.equals("J") || card.equals("Q") || card.equals("K")){
+      return 10;
+    }
+    else if(card.equals("A")){
+      if(num1 == 11){
+        return 1;
+      }
+      else {
+        System.out.printf("Enter value of 1 or 11 for A: ");
+        value = in.nextInt();
+        return value;
+      }
+    }
+    else {
       return Integer.parseInt(card);
     }
   }
