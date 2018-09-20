@@ -6,7 +6,6 @@
       <change beforePath="$PROJECT_DIR$/../BullhornSecurity" beforeDir="false" afterPath="$PROJECT_DIR$/../BullhornSecurity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/CompletionActivityPair/BlackJack.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/CompletionActivityPair/BlackJack.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/BlackJack.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/BlackJack.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../FridayChallenges/WeekFiveFridayProject" beforeDir="false" afterPath="$PROJECT_DIR$/../FridayChallenges/WeekFiveFridayProject" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../HarrisonCollege" beforeDir="false" afterPath="$PROJECT_DIR$/../HarrisonCollege" afterDir="false" />
@@ -39,12 +38,12 @@
     <session id="1777938742">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="4" />
+          <entry key="project.closed" value="5" />
           <entry key="project.open.time.0" value="3" />
-          <entry key="project.open.time.1" value="1" />
+          <entry key="project.open.time.1" value="2" />
           <entry key="project.open.time.14" value="1" />
           <entry key="project.open.time.16" value="1" />
-          <entry key="project.opened" value="6" />
+          <entry key="project.opened" value="7" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -59,12 +58,12 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="java" value="2129" />
+          <entry key="java" value="2297" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="2129" />
+          <entry key="JAVA" value="2297" />
         </counts>
       </usages-collector>
     </session>
@@ -74,13 +73,13 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/BlackJack.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="89">
-              <caret line="175" column="20" selection-start-line="175" selection-start-column="20" selection-end-line="175" selection-end-column="20" />
+            <state relative-caret-position="180">
+              <caret line="177" column="43" selection-start-line="177" selection-start-column="43" selection-end-line="177" selection-end-column="43" />
               <folding>
                 <element signature="method#Original#0;class#BlackJack#0" />
+                <element signature="method#Bonus#0;class#BlackJack#0" />
                 <element signature="method#printSum#0;class#BlackJack#0" />
                 <element signature="method#getCardValue#0;class#BlackJack#0" />
-                <element signature="method#checkValue#0;class#BlackJack#0" />
               </folding>
             </state>
           </provider>
@@ -124,13 +123,7 @@
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
-    <panes>
-      <pane id="Course" />
-      <pane id="PackagesPane" />
-      <pane id="AndroidView" />
-      <pane id="Scope" />
-      <pane id="ProjectPane" />
-    </panes>
+    <panes />
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
@@ -186,12 +179,13 @@
       <workItem from="1537454740387" duration="459000" />
       <workItem from="1537456601696" duration="197000" />
       <workItem from="1537456814461" duration="4588000" />
-      <workItem from="1537468434054" duration="289000" />
+      <workItem from="1537468434054" duration="491000" />
+      <workItem from="1537469059763" duration="567000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="11159000" />
+    <option name="totallyTimeSpent" value="11928000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1295" height="695" extended-state="6" />
@@ -236,13 +230,13 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/BlackJack.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="89">
-          <caret line="175" column="20" selection-start-line="175" selection-start-column="20" selection-end-line="175" selection-end-column="20" />
+        <state relative-caret-position="180">
+          <caret line="177" column="43" selection-start-line="177" selection-start-column="43" selection-end-line="177" selection-end-column="43" />
           <folding>
             <element signature="method#Original#0;class#BlackJack#0" />
+            <element signature="method#Bonus#0;class#BlackJack#0" />
             <element signature="method#printSum#0;class#BlackJack#0" />
             <element signature="method#getCardValue#0;class#BlackJack#0" />
-            <element signature="method#checkValue#0;class#BlackJack#0" />
           </folding>
         </state>
       </provider>

@@ -171,17 +171,18 @@ public class BlackJack {
       return 10;
     }
     else if(card.equals("A")){
-      switch(num1) {
-        case 1:
-          return 11;
-        case 10:
-          return 11;
-        case 11:
-          return 1;
-        default:
+      if(num1 == 0) {
+        do {
           System.out.printf("Enter value of 1 or 11 for A: ");
           value = in.nextInt();
-          return value;
+        } while(value != 1 && value != 11);
+        return value;
+      }
+      if(num1 <= 10 && num1 > 0){
+        return 11;
+      }
+      else {
+        return 1;
       }
     }
     else {
