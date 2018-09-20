@@ -78,7 +78,7 @@ public class BlackJack {
       case 21: // if sum = 21
         System.out.println("Sum: *" + sum); // Print the sum with an asterisk *
         break;  // break statement prevents fall through (all conditions after matching case are executed)
-      case 0: // if case is zero, nothing is printed
+      case 0: // if sum=0, nothing is printed
         break;
       default:
         System.out.println("Sum: " + sum); // by default, the sum is printed
